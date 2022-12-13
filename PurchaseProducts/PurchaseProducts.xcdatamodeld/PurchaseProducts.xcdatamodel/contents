@@ -43,7 +43,7 @@
         <attribute name="sentDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="serverTimestamp" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="stockPurchaseProcessIDs" optional="YES" attributeType="Transformable" customClassName="[Int]"/>
+        <attribute name="stockPurchaseProcessIDs" optional="YES" attributeType="Transformable" valueTransformerName="NSKeyedUnarchiveFromDataTransformerName" customClassName="[Int]"/>
         <attribute name="supplierID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="cancellations" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Cancellation"/>
         <relationship name="invoices" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Invoice"/>

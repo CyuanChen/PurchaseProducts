@@ -27,6 +27,11 @@
 		F36623A42946EA88000C1372 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623A32946EA88000C1372 /* Helper.swift */; };
 		F36623A92946EB9E000C1372 /* Receipt+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623A52946EB9E000C1372 /* Receipt+CoreDataClass.swift */; };
 		F36623AB2946EB9E000C1372 /* Cancellation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623A72946EB9E000C1372 /* Cancellation+CoreDataClass.swift */; };
+		F36623AE29482177000C1372 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623AD29482177000C1372 /* DetailViewModel.swift */; };
+		F36623B5294825D1000C1372 /* InvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623B3294825D1000C1372 /* InvoiceTableViewCell.swift */; };
+		F36623B6294825D1000C1372 /* InvoiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36623B4294825D1000C1372 /* InvoiceTableViewCell.xib */; };
+		F36623B92948266E000C1372 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623B72948266E000C1372 /* DetailTableViewCell.swift */; };
+		F36623BA2948266E000C1372 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36623B82948266E000C1372 /* DetailTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		F36623A32946EA88000C1372 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		F36623A52946EB9E000C1372 /* Receipt+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F36623A72946EB9E000C1372 /* Cancellation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cancellation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F36623AD29482177000C1372 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		F36623B3294825D1000C1372 /* InvoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTableViewCell.swift; sourceTree = "<group>"; };
+		F36623B4294825D1000C1372 /* InvoiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvoiceTableViewCell.xib; sourceTree = "<group>"; };
+		F36623B72948266E000C1372 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		F36623B82948266E000C1372 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +169,10 @@
 				F34464CC29444B1D00602E14 /* ProductTableViewCell.swift */,
 				F34464CD29444B1D00602E14 /* ProductTableViewCell.xib */,
 				F34464D62946B34800602E14 /* DetailTableViewController.swift */,
+				F36623B3294825D1000C1372 /* InvoiceTableViewCell.swift */,
+				F36623B4294825D1000C1372 /* InvoiceTableViewCell.xib */,
+				F36623B72948266E000C1372 /* DetailTableViewCell.swift */,
+				F36623B82948266E000C1372 /* DetailTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				F34464D029444DE900602E14 /* ProductViewModel.swift */,
+				F36623AD29482177000C1372 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -289,8 +304,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F34464A329443FFA00602E14 /* LaunchScreen.storyboard in Resources */,
+				F36623B6294825D1000C1372 /* InvoiceTableViewCell.xib in Resources */,
 				F34464CF29444B1D00602E14 /* ProductTableViewCell.xib in Resources */,
 				F34464A029443FFA00602E14 /* Assets.xcassets in Resources */,
+				F36623BA2948266E000C1372 /* DetailTableViewCell.xib in Resources */,
 				F344649B29443FF500602E14 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,10 +338,13 @@
 				F344649E29443FF500602E14 /* PurchaseProducts.xcdatamodeld in Sources */,
 				F344649829443FF500602E14 /* ViewController.swift in Sources */,
 				F36623AB2946EB9E000C1372 /* Cancellation+CoreDataClass.swift in Sources */,
+				F36623B5294825D1000C1372 /* InvoiceTableViewCell.swift in Sources */,
 				F366239F2946C585000C1372 /* Product+CoreDataClass.swift in Sources */,
 				F36623A12946C585000C1372 /* Item+CoreDataClass.swift in Sources */,
 				F34464D129444DE900602E14 /* ProductViewModel.swift in Sources */,
 				F34464CE29444B1D00602E14 /* ProductTableViewCell.swift in Sources */,
+				F36623B92948266E000C1372 /* DetailTableViewCell.swift in Sources */,
+				F36623AE29482177000C1372 /* DetailViewModel.swift in Sources */,
 				F344649429443FF500602E14 /* AppDelegate.swift in Sources */,
 				F344649629443FF500602E14 /* SceneDelegate.swift in Sources */,
 				F36623A92946EB9E000C1372 /* Receipt+CoreDataClass.swift in Sources */,

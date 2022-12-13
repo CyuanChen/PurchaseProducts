@@ -30,13 +30,17 @@ public class Product: NSManagedObject, Decodable {
     }
     
     required convenience public init(from decoder: Decoder) throws {
-        guard let contextUserInfoKey = CodingUserInfoKey.context else {
-            fatalError("Error")
+        guard let contextUserInfoKey = CodingUserInfoKey.context,
+              let managedObjectContext = decoder.userInfo[contextUserInfoKey] as? NSManagedObjectContext,
+              let entity = NSEntityDescription.entity(forEntityName: "Product", in: managedObjectContext) else {
+            fatalError("Failed to decode Product")
         }
-        guard let managedObjectContext = decoder.userInfo[contextUserInfoKey] as? NSManagedObjectContext else {
-            fatalError("Decode failure")
-        }
-        self.init(context: managedObjectContext)
+        
+//        else {
+//            fatalError("Decode failure")
+//        }
+//        self.init(context: managedObjectContext)
+        self.init(entity: entity, insertInto: managedObjectContext)
         let values = try decoder.container(keyedBy: CodingKeys.self)
         do {
             id = try values.decode(Int32.self, forKey: .id)
