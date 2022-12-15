@@ -6,10 +6,46 @@
 //
 
 import Foundation
-class DetailViewModel {
+import CoreData
+
+class DetailViewModel: BaseViewModel {
     var product: Product?
     
-    init(product: Product) {
+    init(product: Product, context: NSManagedObjectContext?) {
+        super.init()
         self.product = product
+        self.context = context
+    }
+    
+    func addProductDetail(item: Item?, invoice: Invoice?) {
+        if let item = item {
+            let before = product?.items?.count
+            var items = product?.mutableSetValue(forKey: "items")
+            items?.add(item)
+            product?.setValue(items, forKey: "items")
+            print("Before: \(before), after : \(product?.items?.count)")
+        }
+        
+        if let invoice = invoice {
+            var invoices = product?.mutableSetValue(forKey: "invoices")
+            invoices?.add(invoice)
+            product?.setValue(invoices, forKey: "invoices")
+        }
+        saveContext()
+    }
+    
+    override func loadSavedData() {
+        let request: NSFetchRequest<Product> = Product.fetchRequest()
+        let sort = NSSortDescriptor(key: "lastUpdated", ascending: false)
+        request.sortDescriptors = [sort]
+        do {
+            // fetch is performed on the NSManagerdObjectContext
+            let products = try context?.fetch(request) ?? []
+            let product = products.first { $0.id == self.product?.id }
+            self.product = product
+            print("Got \(product)")
+        } catch {
+            print("Load saved data failed")
+        }
     }
 }

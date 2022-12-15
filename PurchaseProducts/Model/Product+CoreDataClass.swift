@@ -36,10 +36,6 @@ public class Product: NSManagedObject, Decodable {
             fatalError("Failed to decode Product")
         }
         
-//        else {
-//            fatalError("Decode failure")
-//        }
-//        self.init(context: managedObjectContext)
         self.init(entity: entity, insertInto: managedObjectContext)
         let values = try decoder.container(keyedBy: CodingKeys.self)
         do {
@@ -89,5 +85,4 @@ public class Product: NSManagedObject, Decodable {
         print("self: \(self)")
     }
 }
-
 

@@ -10,7 +10,7 @@ import CoreData
 
 class ProductViewModel {
     var api: String
-    var products: [Product]?
+    var products: [Product] = []
     var context: NSManagedObjectContext?
     init(api: String, context: NSManagedObjectContext?) {
         self.api = api
@@ -65,8 +65,8 @@ class ProductViewModel {
         request.sortDescriptors = [sort]
         do {
             // fetch is performed on the NSManagerdObjectContext
-            products = try context?.fetch(request)
-            print("Got \(self.products?.count ?? 0)")
+            products = try context?.fetch(request) ?? []
+            print("Got \(self.products.count)")
         } catch {
             print("Load saved data failed")
         }

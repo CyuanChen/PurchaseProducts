@@ -32,6 +32,13 @@
 		F36623B6294825D1000C1372 /* InvoiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36623B4294825D1000C1372 /* InvoiceTableViewCell.xib */; };
 		F36623B92948266E000C1372 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623B72948266E000C1372 /* DetailTableViewCell.swift */; };
 		F36623BA2948266E000C1372 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36623B82948266E000C1372 /* DetailTableViewCell.xib */; };
+		F36623BE29487838000C1372 /* AddPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623BC29487838000C1372 /* AddPurchaseViewController.swift */; };
+		F36623BF29487838000C1372 /* AddPurchaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36623BD29487838000C1372 /* AddPurchaseViewController.xib */; };
+		F36623C129489847000C1372 /* AddDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623C029489847000C1372 /* AddDetailTableViewController.swift */; };
+		F36623C629495ED2000C1372 /* AddDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623C429495ED2000C1372 /* AddDetailTableViewCell.swift */; };
+		F36623C729495ED2000C1372 /* AddDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36623C529495ED2000C1372 /* AddDetailTableViewCell.xib */; };
+		F36623C929496A92000C1372 /* AddDetailVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623C829496A92000C1372 /* AddDetailVIewModel.swift */; };
+		F36623CB29496EDC000C1372 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623CA29496EDC000C1372 /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +88,13 @@
 		F36623B4294825D1000C1372 /* InvoiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvoiceTableViewCell.xib; sourceTree = "<group>"; };
 		F36623B72948266E000C1372 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		F36623B82948266E000C1372 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		F36623BC29487838000C1372 /* AddPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseViewController.swift; sourceTree = "<group>"; };
+		F36623BD29487838000C1372 /* AddPurchaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPurchaseViewController.xib; sourceTree = "<group>"; };
+		F36623C029489847000C1372 /* AddDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailTableViewController.swift; sourceTree = "<group>"; };
+		F36623C429495ED2000C1372 /* AddDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailTableViewCell.swift; sourceTree = "<group>"; };
+		F36623C529495ED2000C1372 /* AddDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDetailTableViewCell.xib; sourceTree = "<group>"; };
+		F36623C829496A92000C1372 /* AddDetailVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailVIewModel.swift; sourceTree = "<group>"; };
+		F36623CA29496EDC000C1372 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,11 +182,16 @@
 			children = (
 				F34464CC29444B1D00602E14 /* ProductTableViewCell.swift */,
 				F34464CD29444B1D00602E14 /* ProductTableViewCell.xib */,
-				F34464D62946B34800602E14 /* DetailTableViewController.swift */,
 				F36623B3294825D1000C1372 /* InvoiceTableViewCell.swift */,
 				F36623B4294825D1000C1372 /* InvoiceTableViewCell.xib */,
 				F36623B72948266E000C1372 /* DetailTableViewCell.swift */,
 				F36623B82948266E000C1372 /* DetailTableViewCell.xib */,
+				F36623BC29487838000C1372 /* AddPurchaseViewController.swift */,
+				F36623BD29487838000C1372 /* AddPurchaseViewController.xib */,
+				F34464D62946B34800602E14 /* DetailTableViewController.swift */,
+				F36623C029489847000C1372 /* AddDetailTableViewController.swift */,
+				F36623C429495ED2000C1372 /* AddDetailTableViewCell.swift */,
+				F36623C529495ED2000C1372 /* AddDetailTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +201,8 @@
 			children = (
 				F34464D029444DE900602E14 /* ProductViewModel.swift */,
 				F36623AD29482177000C1372 /* DetailViewModel.swift */,
+				F36623C829496A92000C1372 /* AddDetailVIewModel.swift */,
+				F36623CA29496EDC000C1372 /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -303,7 +324,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36623BF29487838000C1372 /* AddPurchaseViewController.xib in Resources */,
 				F34464A329443FFA00602E14 /* LaunchScreen.storyboard in Resources */,
+				F36623C729495ED2000C1372 /* AddDetailTableViewCell.xib in Resources */,
 				F36623B6294825D1000C1372 /* InvoiceTableViewCell.xib in Resources */,
 				F34464CF29444B1D00602E14 /* ProductTableViewCell.xib in Resources */,
 				F34464A029443FFA00602E14 /* Assets.xcassets in Resources */,
@@ -340,13 +363,18 @@
 				F36623AB2946EB9E000C1372 /* Cancellation+CoreDataClass.swift in Sources */,
 				F36623B5294825D1000C1372 /* InvoiceTableViewCell.swift in Sources */,
 				F366239F2946C585000C1372 /* Product+CoreDataClass.swift in Sources */,
+				F36623C929496A92000C1372 /* AddDetailVIewModel.swift in Sources */,
 				F36623A12946C585000C1372 /* Item+CoreDataClass.swift in Sources */,
 				F34464D129444DE900602E14 /* ProductViewModel.swift in Sources */,
 				F34464CE29444B1D00602E14 /* ProductTableViewCell.swift in Sources */,
+				F36623C129489847000C1372 /* AddDetailTableViewController.swift in Sources */,
 				F36623B92948266E000C1372 /* DetailTableViewCell.swift in Sources */,
 				F36623AE29482177000C1372 /* DetailViewModel.swift in Sources */,
+				F36623BE29487838000C1372 /* AddPurchaseViewController.swift in Sources */,
 				F344649429443FF500602E14 /* AppDelegate.swift in Sources */,
 				F344649629443FF500602E14 /* SceneDelegate.swift in Sources */,
+				F36623CB29496EDC000C1372 /* BaseViewModel.swift in Sources */,
+				F36623C629495ED2000C1372 /* AddDetailTableViewCell.swift in Sources */,
 				F36623A92946EB9E000C1372 /* Receipt+CoreDataClass.swift in Sources */,
 				F366239D2946C585000C1372 /* Invoice+CoreDataClass.swift in Sources */,
 			);

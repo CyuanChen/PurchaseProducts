@@ -16,26 +16,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        navigationItem.title = "Purchase Products"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addProduct))
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductTableViewCell")
         tableView.estimatedRowHeight = 50
-        
-//        container = NSPersistentContainer(name: "PurchaseProducts")
-//        container?.loadPersistentStores(completionHandler: { storeDescription, error in
-//            // resolve conflict by using correct NSMergePolicy
-//            self.container?.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-//            if let error = error {
-//                print("VC unresolved error: \(error)")
-//            }
-//        })
         binding()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getData()
     }
     
     func binding() {
         viewModel = ProductViewModel(api: "https://my-json-server.typicode.com/butterfly-systems/sample-data/purchase_orders", context: container?.viewContext)
+    }
+    
+    func getData() {
         let userDefault = UserDefaults.standard
         if userDefault.bool(forKey: "GetDataFromAPI") == false {
             viewModel?.getData(completion: { [weak self] success in
@@ -58,7 +57,11 @@ class ViewController: UIViewController {
     }
     
     @objc func addProduct() {
-        print("Add")
+        let vc = AddPurchaseViewController(nibName: "AddPurchaseViewController", bundle: nil)
+        let navVC = UINavigationController(rootViewController: vc)
+        vc.container = container
+        vc.delegate = self
+        self.present(navVC, animated: true)
     }
 }
 
@@ -74,7 +77,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.products?.count ?? 0
+        return viewModel?.products.count ?? 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -88,7 +91,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let vc = DetailTableViewController()
         if let products = viewModel?.products, products.count > indexPath.row {
             let product = products[indexPath.row]
-            let viewModel = DetailViewModel(product: product)
+            let viewModel = DetailViewModel(product: product, context: container?.viewContext)
             vc.viewModel = viewModel
             self.navigationController?.pushViewController(vc, animated: true)
         }
@@ -96,3 +99,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension ViewController: AddPurchaseDelegate {
+    func addPurchaseProducts(product: Product?) {
+        if let product = product {
+            viewModel?.products.append(product)
+            viewModel?.saveContext()
+            viewModel?.loadSavedData()
+            reloadData()
+        }
+        
+    }
+}

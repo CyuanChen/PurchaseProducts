@@ -23,12 +23,19 @@ class DetailTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    func clear() {
+        idLabel.text = nil
+        detailLabel.text = nil
+    }
+    
     func configureCell(item: Item) {
-        idLabel.text = "Item ID: \(item.id)"
+        clear()
+        idLabel.text = "Item ID: \(item.productItemID)"
         detailLabel.text = "Quantity: \(item.quantity)"
     }
     
     func configureCell(invoice: Invoice) {
+        clear()
         if let invoiceNumber = invoice.invoiceNumber {
             idLabel.text = "Invoice number: \(invoiceNumber)"
         }
