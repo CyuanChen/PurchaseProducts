@@ -19,15 +19,13 @@ class DetailViewModel: BaseViewModel {
     
     func addProductDetail(item: Item?, invoice: Invoice?) {
         if let item = item {
-            let before = product?.items?.count
-            var items = product?.mutableSetValue(forKey: "items")
+            let items = product?.mutableSetValue(forKey: "items")
             items?.add(item)
             product?.setValue(items, forKey: "items")
-            print("Before: \(before), after : \(product?.items?.count)")
         }
         
         if let invoice = invoice {
-            var invoices = product?.mutableSetValue(forKey: "invoices")
+            let invoices = product?.mutableSetValue(forKey: "invoices")
             invoices?.add(invoice)
             product?.setValue(invoices, forKey: "invoices")
         }
@@ -43,7 +41,6 @@ class DetailViewModel: BaseViewModel {
             let products = try context?.fetch(request) ?? []
             let product = products.first { $0.id == self.product?.id }
             self.product = product
-            print("Got \(product)")
         } catch {
             print("Load saved data failed")
         }

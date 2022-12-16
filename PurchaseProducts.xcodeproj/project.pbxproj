@@ -15,8 +15,6 @@
 		F34464A029443FFA00602E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F344649F29443FFA00602E14 /* Assets.xcassets */; };
 		F34464A329443FFA00602E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F34464A129443FFA00602E14 /* LaunchScreen.storyboard */; };
 		F34464AE29443FFA00602E14 /* PurchaseProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34464AD29443FFA00602E14 /* PurchaseProductsTests.swift */; };
-		F34464B829443FFA00602E14 /* PurchaseProductsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34464B729443FFA00602E14 /* PurchaseProductsUITests.swift */; };
-		F34464BA29443FFA00602E14 /* PurchaseProductsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34464B929443FFA00602E14 /* PurchaseProductsUITestsLaunchTests.swift */; };
 		F34464CE29444B1D00602E14 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34464CC29444B1D00602E14 /* ProductTableViewCell.swift */; };
 		F34464CF29444B1D00602E14 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F34464CD29444B1D00602E14 /* ProductTableViewCell.xib */; };
 		F34464D129444DE900602E14 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34464D029444DE900602E14 /* ProductViewModel.swift */; };
@@ -49,13 +47,6 @@
 			remoteGlobalIDString = F344648F29443FF500602E14;
 			remoteInfo = PurchaseProducts;
 		};
-		F34464B429443FFA00602E14 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F344648829443FF500602E14 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F344648F29443FF500602E14;
-			remoteInfo = PurchaseProducts;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -70,9 +61,6 @@
 		F34464A429443FFA00602E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F34464A929443FFA00602E14 /* PurchaseProductsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurchaseProductsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34464AD29443FFA00602E14 /* PurchaseProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProductsTests.swift; sourceTree = "<group>"; };
-		F34464B329443FFA00602E14 /* PurchaseProductsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurchaseProductsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F34464B729443FFA00602E14 /* PurchaseProductsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProductsUITests.swift; sourceTree = "<group>"; };
-		F34464B929443FFA00602E14 /* PurchaseProductsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseProductsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F34464CC29444B1D00602E14 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		F34464CD29444B1D00602E14 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		F34464D029444DE900602E14 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
@@ -112,13 +100,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F34464B029443FFA00602E14 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -127,7 +108,6 @@
 			children = (
 				F344649229443FF500602E14 /* PurchaseProducts */,
 				F34464AC29443FFA00602E14 /* PurchaseProductsTests */,
-				F34464B629443FFA00602E14 /* PurchaseProductsUITests */,
 				F344649129443FF500602E14 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,7 +117,6 @@
 			children = (
 				F344649029443FF500602E14 /* PurchaseProducts.app */,
 				F34464A929443FFA00602E14 /* PurchaseProductsTests.xctest */,
-				F34464B329443FFA00602E14 /* PurchaseProductsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,15 +145,6 @@
 				F34464AD29443FFA00602E14 /* PurchaseProductsTests.swift */,
 			);
 			path = PurchaseProductsTests;
-			sourceTree = "<group>";
-		};
-		F34464B629443FFA00602E14 /* PurchaseProductsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F34464B729443FFA00602E14 /* PurchaseProductsUITests.swift */,
-				F34464B929443FFA00602E14 /* PurchaseProductsUITestsLaunchTests.swift */,
-			);
-			path = PurchaseProductsUITests;
 			sourceTree = "<group>";
 		};
 		F34464C82944456F00602E14 /* View */ = {
@@ -258,24 +228,6 @@
 			productReference = F34464A929443FFA00602E14 /* PurchaseProductsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F34464B229443FFA00602E14 /* PurchaseProductsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F34464C329443FFA00602E14 /* Build configuration list for PBXNativeTarget "PurchaseProductsUITests" */;
-			buildPhases = (
-				F34464AF29443FFA00602E14 /* Sources */,
-				F34464B029443FFA00602E14 /* Frameworks */,
-				F34464B129443FFA00602E14 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F34464B529443FFA00602E14 /* PBXTargetDependency */,
-			);
-			name = PurchaseProductsUITests;
-			productName = PurchaseProductsUITests;
-			productReference = F34464B329443FFA00602E14 /* PurchaseProductsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -290,10 +242,6 @@
 						CreatedOnToolsVersion = 14.1;
 					};
 					F34464A829443FFA00602E14 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = F344648F29443FF500602E14;
-					};
-					F34464B229443FFA00602E14 = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = F344648F29443FF500602E14;
 					};
@@ -314,7 +262,6 @@
 			targets = (
 				F344648F29443FF500602E14 /* PurchaseProducts */,
 				F34464A829443FFA00602E14 /* PurchaseProductsTests */,
-				F34464B229443FFA00602E14 /* PurchaseProductsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -336,13 +283,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F34464A729443FFA00602E14 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F34464B129443FFA00602E14 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -388,15 +328,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F34464AF29443FFA00602E14 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F34464B829443FFA00602E14 /* PurchaseProductsUITests.swift in Sources */,
-				F34464BA29443FFA00602E14 /* PurchaseProductsUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -404,11 +335,6 @@
 			isa = PBXTargetDependency;
 			target = F344648F29443FF500602E14 /* PurchaseProducts */;
 			targetProxy = F34464AA29443FFA00602E14 /* PBXContainerItemProxy */;
-		};
-		F34464B529443FFA00602E14 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F344648F29443FF500602E14 /* PurchaseProducts */;
-			targetProxy = F34464B429443FFA00602E14 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -642,42 +568,6 @@
 			};
 			name = Release;
 		};
-		F34464C429443FFA00602E14 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L6VPYXD3CW;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = PeterChen.PurchaseProductsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PurchaseProducts;
-			};
-			name = Debug;
-		};
-		F34464C529443FFA00602E14 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L6VPYXD3CW;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = PeterChen.PurchaseProductsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PurchaseProducts;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -704,15 +594,6 @@
 			buildConfigurations = (
 				F34464C129443FFA00602E14 /* Debug */,
 				F34464C229443FFA00602E14 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F34464C329443FFA00602E14 /* Build configuration list for PBXNativeTarget "PurchaseProductsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F34464C429443FFA00602E14 /* Debug */,
-				F34464C529443FFA00602E14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

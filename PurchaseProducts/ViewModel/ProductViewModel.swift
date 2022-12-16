@@ -8,13 +8,14 @@
 import Foundation
 import CoreData
 
-class ProductViewModel {
+class ProductViewModel: BaseViewModel {
     var api: String
     var products: [Product] = []
-    var context: NSManagedObjectContext?
     init(api: String, context: NSManagedObjectContext?) {
         self.api = api
+        super.init()
         self.context = context
+        
     }
     
     func getData(completion: @escaping (Bool) -> ()) {
@@ -49,24 +50,13 @@ class ProductViewModel {
         task.resume()
     }
     
-    func saveContext() {
-        if context?.hasChanges ?? false {
-            do {
-                try context?.save()
-            } catch {
-                print("An error occurred while saving: \(error)")
-            }
-        }
-    }
-    
-    func loadSavedData() {
+    override func loadSavedData() {
         let request: NSFetchRequest<Product> = Product.fetchRequest()
         let sort = NSSortDescriptor(key: "lastUpdated", ascending: false)
         request.sortDescriptors = [sort]
         do {
             // fetch is performed on the NSManagerdObjectContext
             products = try context?.fetch(request) ?? []
-            print("Got \(self.products.count)")
         } catch {
             print("Load saved data failed")
         }
