@@ -51,6 +51,17 @@
                ReferencedContainer = "container:PurchaseProducts.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3945ECE29A5D65900218C39"
+               BuildableName = "TestCoreDataStack.xctest"
+               BlueprintName = "TestCoreDataStack"
+               ReferencedContainer = "container:PurchaseProducts.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

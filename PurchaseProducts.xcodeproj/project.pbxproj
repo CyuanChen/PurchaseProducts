@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F344649429443FF500602E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344649329443FF500602E14 /* AppDelegate.swift */; };
 		F344649629443FF500602E14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344649529443FF500602E14 /* SceneDelegate.swift */; };
-		F344649829443FF500602E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344649729443FF500602E14 /* ViewController.swift */; };
+		F344649829443FF500602E14 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344649729443FF500602E14 /* ProductViewController.swift */; };
 		F344649B29443FF500602E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F344649929443FF500602E14 /* Main.storyboard */; };
 		F344649E29443FF500602E14 /* PurchaseProducts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F344649C29443FF500602E14 /* PurchaseProducts.xcdatamodeld */; };
 		F34464A029443FFA00602E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F344649F29443FFA00602E14 /* Assets.xcassets */; };
@@ -37,10 +37,20 @@
 		F36623C729495ED2000C1372 /* AddDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36623C529495ED2000C1372 /* AddDetailTableViewCell.xib */; };
 		F36623C929496A92000C1372 /* AddDetailVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623C829496A92000C1372 /* AddDetailVIewModel.swift */; };
 		F36623CB29496EDC000C1372 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36623CA29496EDC000C1372 /* BaseViewModel.swift */; };
+		F3945ED929A5D69500218C39 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3945ED829A5D69500218C39 /* TestCoreDataStack.swift */; };
+		F3945EDC29A74FA700218C39 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3945EDB29A74FA700218C39 /* CoreDataStack.swift */; };
+		F3945EDE29A7552500218C39 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3945EDD29A7552500218C39 /* ProductService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F34464AA29443FFA00602E14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F344648829443FF500602E14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F344648F29443FF500602E14;
+			remoteInfo = PurchaseProducts;
+		};
+		F3945ED329A5D65900218C39 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F344648829443FF500602E14 /* Project object */;
 			proxyType = 1;
@@ -53,7 +63,7 @@
 		F344649029443FF500602E14 /* PurchaseProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurchaseProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F344649329443FF500602E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F344649529443FF500602E14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F344649729443FF500602E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F344649729443FF500602E14 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		F344649A29443FF500602E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F344649D29443FF500602E14 /* PurchaseProducts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PurchaseProducts.xcdatamodel; sourceTree = "<group>"; };
 		F344649F29443FFA00602E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +93,10 @@
 		F36623C529495ED2000C1372 /* AddDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDetailTableViewCell.xib; sourceTree = "<group>"; };
 		F36623C829496A92000C1372 /* AddDetailVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailVIewModel.swift; sourceTree = "<group>"; };
 		F36623CA29496EDC000C1372 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		F3945ECF29A5D65900218C39 /* TestCoreDataStack.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCoreDataStack.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3945ED829A5D69500218C39 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
+		F3945EDB29A74FA700218C39 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F3945EDD29A7552500218C39 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +108,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F34464A629443FFA00602E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3945ECC29A5D65900218C39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -117,6 +138,7 @@
 			children = (
 				F344649029443FF500602E14 /* PurchaseProducts.app */,
 				F34464A929443FFA00602E14 /* PurchaseProductsTests.xctest */,
+				F3945ECF29A5D65900218C39 /* TestCoreDataStack.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,17 +146,18 @@
 		F344649229443FF500602E14 /* PurchaseProducts */ = {
 			isa = PBXGroup;
 			children = (
-				F34464CB2944458900602E14 /* Model */,
+				F3945EDA29A74F9200218C39 /* Service */,
 				F34464C92944457600602E14 /* ViewModel */,
+				F34464CB2944458900602E14 /* Model */,
+				F3BDBB4629A4679900CEA39A /* ViewController */,
 				F34464C82944456F00602E14 /* View */,
+				F3BD9EE729A4666300CEA39A /* Detail */,
 				F344649329443FF500602E14 /* AppDelegate.swift */,
 				F344649529443FF500602E14 /* SceneDelegate.swift */,
-				F344649729443FF500602E14 /* ViewController.swift */,
 				F344649929443FF500602E14 /* Main.storyboard */,
 				F344649F29443FFA00602E14 /* Assets.xcassets */,
 				F34464A129443FFA00602E14 /* LaunchScreen.storyboard */,
 				F34464A429443FFA00602E14 /* Info.plist */,
-				F344649C29443FF500602E14 /* PurchaseProducts.xcdatamodeld */,
 			);
 			path = PurchaseProducts;
 			sourceTree = "<group>";
@@ -143,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				F34464AD29443FFA00602E14 /* PurchaseProductsTests.swift */,
+				F3945ED829A5D69500218C39 /* TestCoreDataStack.swift */,
 			);
 			path = PurchaseProductsTests;
 			sourceTree = "<group>";
@@ -152,16 +176,6 @@
 			children = (
 				F34464CC29444B1D00602E14 /* ProductTableViewCell.swift */,
 				F34464CD29444B1D00602E14 /* ProductTableViewCell.xib */,
-				F36623B3294825D1000C1372 /* InvoiceTableViewCell.swift */,
-				F36623B4294825D1000C1372 /* InvoiceTableViewCell.xib */,
-				F36623B72948266E000C1372 /* DetailTableViewCell.swift */,
-				F36623B82948266E000C1372 /* DetailTableViewCell.xib */,
-				F36623BC29487838000C1372 /* AddPurchaseViewController.swift */,
-				F36623BD29487838000C1372 /* AddPurchaseViewController.xib */,
-				F34464D62946B34800602E14 /* DetailTableViewController.swift */,
-				F36623C029489847000C1372 /* AddDetailTableViewController.swift */,
-				F36623C429495ED2000C1372 /* AddDetailTableViewCell.swift */,
-				F36623C529495ED2000C1372 /* AddDetailTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,10 +183,8 @@
 		F34464C92944457600602E14 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F34464D029444DE900602E14 /* ProductViewModel.swift */,
-				F36623AD29482177000C1372 /* DetailViewModel.swift */,
-				F36623C829496A92000C1372 /* AddDetailVIewModel.swift */,
 				F36623CA29496EDC000C1372 /* BaseViewModel.swift */,
+				F34464D029444DE900602E14 /* ProductViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -186,8 +198,77 @@
 				F36623A72946EB9E000C1372 /* Cancellation+CoreDataClass.swift */,
 				F366239B2946C585000C1372 /* Item+CoreDataClass.swift */,
 				F36623A32946EA88000C1372 /* Helper.swift */,
+				F344649C29443FF500602E14 /* PurchaseProducts.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F3945EDA29A74F9200218C39 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F3945EDB29A74FA700218C39 /* CoreDataStack.swift */,
+				F3945EDD29A7552500218C39 /* ProductService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F3BD9EE729A4666300CEA39A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F3BDBB4729A4689400CEA39A /* ViewController */,
+				F3BD9EEA29A4667B00CEA39A /* ViewModel */,
+				F3BD9EE929A4667500CEA39A /* Model */,
+				F3BD9EE829A4666B00CEA39A /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F3BD9EE829A4666B00CEA39A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F36623B72948266E000C1372 /* DetailTableViewCell.swift */,
+				F36623B82948266E000C1372 /* DetailTableViewCell.xib */,
+				F36623B3294825D1000C1372 /* InvoiceTableViewCell.swift */,
+				F36623B4294825D1000C1372 /* InvoiceTableViewCell.xib */,
+				F36623C429495ED2000C1372 /* AddDetailTableViewCell.swift */,
+				F36623C529495ED2000C1372 /* AddDetailTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3BD9EE929A4667500CEA39A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3BD9EEA29A4667B00CEA39A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F36623C829496A92000C1372 /* AddDetailVIewModel.swift */,
+				F36623AD29482177000C1372 /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3BDBB4629A4679900CEA39A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F344649729443FF500602E14 /* ProductViewController.swift */,
+				F36623BC29487838000C1372 /* AddPurchaseViewController.swift */,
+				F36623BD29487838000C1372 /* AddPurchaseViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F3BDBB4729A4689400CEA39A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F34464D62946B34800602E14 /* DetailTableViewController.swift */,
+				F36623C029489847000C1372 /* AddDetailTableViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +309,24 @@
 			productReference = F34464A929443FFA00602E14 /* PurchaseProductsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F3945ECE29A5D65900218C39 /* TestCoreDataStack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3945ED729A5D65900218C39 /* Build configuration list for PBXNativeTarget "TestCoreDataStack" */;
+			buildPhases = (
+				F3945ECB29A5D65900218C39 /* Sources */,
+				F3945ECC29A5D65900218C39 /* Frameworks */,
+				F3945ECD29A5D65900218C39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3945ED429A5D65900218C39 /* PBXTargetDependency */,
+			);
+			name = TestCoreDataStack;
+			productName = TestCoreDataStack;
+			productReference = F3945ECF29A5D65900218C39 /* TestCoreDataStack.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -242,6 +341,10 @@
 						CreatedOnToolsVersion = 14.1;
 					};
 					F34464A829443FFA00602E14 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = F344648F29443FF500602E14;
+					};
+					F3945ECE29A5D65900218C39 = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = F344648F29443FF500602E14;
 					};
@@ -262,6 +365,7 @@
 			targets = (
 				F344648F29443FF500602E14 /* PurchaseProducts */,
 				F34464A829443FFA00602E14 /* PurchaseProductsTests */,
+				F3945ECE29A5D65900218C39 /* TestCoreDataStack */,
 			);
 		};
 /* End PBXProject section */
@@ -289,6 +393,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3945ECD29A5D65900218C39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -299,13 +410,14 @@
 				F36623A42946EA88000C1372 /* Helper.swift in Sources */,
 				F34464D72946B34800602E14 /* DetailTableViewController.swift in Sources */,
 				F344649E29443FF500602E14 /* PurchaseProducts.xcdatamodeld in Sources */,
-				F344649829443FF500602E14 /* ViewController.swift in Sources */,
+				F344649829443FF500602E14 /* ProductViewController.swift in Sources */,
 				F36623AB2946EB9E000C1372 /* Cancellation+CoreDataClass.swift in Sources */,
 				F36623B5294825D1000C1372 /* InvoiceTableViewCell.swift in Sources */,
 				F366239F2946C585000C1372 /* Product+CoreDataClass.swift in Sources */,
 				F36623C929496A92000C1372 /* AddDetailVIewModel.swift in Sources */,
 				F36623A12946C585000C1372 /* Item+CoreDataClass.swift in Sources */,
 				F34464D129444DE900602E14 /* ProductViewModel.swift in Sources */,
+				F3945EDE29A7552500218C39 /* ProductService.swift in Sources */,
 				F34464CE29444B1D00602E14 /* ProductTableViewCell.swift in Sources */,
 				F36623C129489847000C1372 /* AddDetailTableViewController.swift in Sources */,
 				F36623B92948266E000C1372 /* DetailTableViewCell.swift in Sources */,
@@ -313,6 +425,7 @@
 				F36623BE29487838000C1372 /* AddPurchaseViewController.swift in Sources */,
 				F344649429443FF500602E14 /* AppDelegate.swift in Sources */,
 				F344649629443FF500602E14 /* SceneDelegate.swift in Sources */,
+				F3945EDC29A74FA700218C39 /* CoreDataStack.swift in Sources */,
 				F36623CB29496EDC000C1372 /* BaseViewModel.swift in Sources */,
 				F36623C629495ED2000C1372 /* AddDetailTableViewCell.swift in Sources */,
 				F36623A92946EB9E000C1372 /* Receipt+CoreDataClass.swift in Sources */,
@@ -325,6 +438,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F34464AE29443FFA00602E14 /* PurchaseProductsTests.swift in Sources */,
+				F3945ED929A5D69500218C39 /* TestCoreDataStack.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3945ECB29A5D65900218C39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +456,11 @@
 			isa = PBXTargetDependency;
 			target = F344648F29443FF500602E14 /* PurchaseProducts */;
 			targetProxy = F34464AA29443FFA00602E14 /* PBXContainerItemProxy */;
+		};
+		F3945ED429A5D65900218C39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F344648F29443FF500602E14 /* PurchaseProducts */;
+			targetProxy = F3945ED329A5D65900218C39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -568,6 +694,50 @@
 			};
 			name = Release;
 		};
+		F3945ED529A5D65900218C39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6VPYXD3CW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PeterChen.TestCoreDataStack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PurchaseProducts.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PurchaseProducts";
+			};
+			name = Debug;
+		};
+		F3945ED629A5D65900218C39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6VPYXD3CW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PeterChen.TestCoreDataStack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PurchaseProducts.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PurchaseProducts";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -594,6 +764,15 @@
 			buildConfigurations = (
 				F34464C129443FFA00602E14 /* Debug */,
 				F34464C229443FFA00602E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3945ED729A5D65900218C39 /* Build configuration list for PBXNativeTarget "TestCoreDataStack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3945ED529A5D65900218C39 /* Debug */,
+				F3945ED629A5D65900218C39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

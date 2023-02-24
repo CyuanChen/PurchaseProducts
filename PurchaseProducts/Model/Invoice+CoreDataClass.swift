@@ -25,6 +25,7 @@ public class Invoice: NSManagedObject, Decodable {
     }
     
     required convenience public init(from decoder: Decoder) throws {
+		
         guard let contextUserInfoKey = CodingUserInfoKey.context else {
             fatalError("Error")
         }
@@ -36,7 +37,7 @@ public class Invoice: NSManagedObject, Decodable {
         do {
             id = try values.decode(Int32.self, forKey: .id)
             invoiceNumber = try values.decode(String.self, forKey: .invoiceNumber)
-            receivedStatus = try values.decode(Int16.self, forKey: .receivedStatus)
+            receivedStatus = try values.decode(Int32.self, forKey: .receivedStatus)
             lastUpdatedUserEntityID = try values.decode(Int32.self, forKey: .lastUpdatedUserEntityID)
             transientIdentifier = try values.decode(String.self, forKey: .transientIdentifier)
             

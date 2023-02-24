@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A380" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Cancellation" representedClassName=".Cancellation" syncable="YES" codeGenerationType="category">
         <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
@@ -16,7 +16,7 @@
         <attribute name="lastUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="lastUpdatedUserEntityID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="receiptSentDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="receivedStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="receivedStatus" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="transientIdentifier" optional="YES" attributeType="String"/>
         <relationship name="receipts" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Receipt"/>
     </entity>

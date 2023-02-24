@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ProductViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: ProductViewModel?
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as? ProductTableViewCell else {
             return UITableViewCell()
@@ -99,7 +99,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ViewController: AddPurchaseDelegate {
+extension ProductViewController: AddPurchaseDelegate {
     func addPurchaseProducts(product: Product?) {
         if let product = product {
             viewModel?.products.append(product)

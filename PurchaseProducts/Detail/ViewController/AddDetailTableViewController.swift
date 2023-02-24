@@ -104,7 +104,7 @@ extension AddDetailTableViewController: UITextFieldDelegate {
             viewModel?.invoice?.invoiceNumber = value
         case .receiveStatus:
             if let receiveStatus = Int(value) {
-                viewModel?.invoice?.receivedStatus = Int16(receiveStatus)
+                viewModel?.invoice?.receivedStatus = Int32(receiveStatus)
             }
         }
     }
