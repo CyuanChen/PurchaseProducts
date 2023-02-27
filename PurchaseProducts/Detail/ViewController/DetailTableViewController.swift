@@ -84,8 +84,8 @@ class DetailTableViewController: UITableViewController {
 }
 
 extension DetailTableViewController: AddDetailDelegate {
-    func addDetail(item: Item?, invoice: Invoice?) {
-        viewModel?.addProductDetail(item: item, invoice: invoice)
+	func addDetail(item: Item?, invoice: Invoice?, date: Date?) {
+        viewModel?.addProductDetail(item: item, invoice: invoice, date: date)
         loadData()
     }
 }

@@ -17,7 +17,7 @@ class DetailViewModel: BaseViewModel {
         self.context = context
     }
     
-    func addProductDetail(item: Item?, invoice: Invoice?) {
+	func addProductDetail(item: Item?, invoice: Invoice?, date: Date?) {
         if let item = item {
             let items = product?.mutableSetValue(forKey: "items")
             items?.add(item)
@@ -29,6 +29,9 @@ class DetailViewModel: BaseViewModel {
             invoices?.add(invoice)
             product?.setValue(invoices, forKey: "invoices")
         }
+		if let date = date {
+			product?.lastUpdated = date
+		}
         saveContext()
     }
     

@@ -40,6 +40,7 @@
 		F3945ED929A5D69500218C39 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3945ED829A5D69500218C39 /* TestCoreDataStack.swift */; };
 		F3945EDC29A74FA700218C39 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3945EDB29A74FA700218C39 /* CoreDataStack.swift */; };
 		F3945EDE29A7552500218C39 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3945EDD29A7552500218C39 /* ProductService.swift */; };
+		F3F76AE429AB274B006B7AC1 /* ProductServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F76AE329AB274B006B7AC1 /* ProductServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		F3945ED829A5D69500218C39 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 		F3945EDB29A74FA700218C39 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		F3945EDD29A7552500218C39 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		F3F76AE329AB274B006B7AC1 /* ProductServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		F34464AC29443FFA00602E14 /* PurchaseProductsTests */ = {
 			isa = PBXGroup;
 			children = (
+				F3F76AE329AB274B006B7AC1 /* ProductServiceTests.swift */,
 				F34464AD29443FFA00602E14 /* PurchaseProductsTests.swift */,
 				F3945ED829A5D69500218C39 /* TestCoreDataStack.swift */,
 			);
@@ -437,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F76AE429AB274B006B7AC1 /* ProductServiceTests.swift in Sources */,
 				F34464AE29443FFA00602E14 /* PurchaseProductsTests.swift in Sources */,
 				F3945ED929A5D69500218C39 /* TestCoreDataStack.swift in Sources */,
 			);

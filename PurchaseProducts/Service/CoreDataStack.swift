@@ -10,7 +10,6 @@ import CoreData
 open class CoreDataStack {
 	public static let modelName = "PurchaseProducts"
 	public static let model: NSManagedObjectModel = {
-	  // swiftlint:disable force_unwrapping
 	  let modelURL = Bundle.main.url(forResource: modelName, withExtension: "momd")!
 	  return NSManagedObjectModel(contentsOf: modelURL)!
 	}()
@@ -32,6 +31,11 @@ open class CoreDataStack {
 		}
 		return container
 	}()
+	
+	public func newDerivedContext() -> NSManagedObjectContext {
+		let context = storeContainer.newBackgroundContext()
+		return context
+	}
 	
 	public func saveContext() {
 		saveContext(mainContext)

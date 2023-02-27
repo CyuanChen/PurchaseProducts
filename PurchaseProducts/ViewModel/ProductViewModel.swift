@@ -11,8 +11,11 @@ import CoreData
 class ProductViewModel: BaseViewModel {
     var api: String
     var products: [Product] = []
-    init(api: String, context: NSManagedObjectContext?) {
+//	private lazy var coreDataStack = CoreDataStack()
+//	private var productService: ProductService
+	init(api: String, context: NSManagedObjectContext?) {
         self.api = api
+//		let productService = productService ? productService : ProductService(manageObjectContext: core, coreDataStack: <#T##CoreDataStack#>)
         super.init()
         self.context = context
         

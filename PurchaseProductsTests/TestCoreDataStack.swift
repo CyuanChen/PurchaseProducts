@@ -6,31 +6,25 @@
 //
 
 import XCTest
+import Foundation
+import CoreData
+import PurchaseProducts
 
-final class TestCoreDataStack: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+class TestCoreDataStack: CoreDataStack {
+	override init() {
+		super.init()
+		let persistentStoreDescription = NSPersistentStoreDescription()
+		// https://medium.com/tiendeo-tech/ios-how-to-unit-test-core-data-eb4a754f2603
+		// Apple Suggestion
+		persistentStoreDescription.url = URL(filePath: "/dev/null")
+		let container = NSPersistentContainer(name: CoreDataStack.modelName, managedObjectModel: CoreDataStack.model)
+		container.persistentStoreDescriptions = [persistentStoreDescription]
+		container.loadPersistentStores { _, error in
+			if let error = error as NSError? {
+				fatalError("Unresolved error \(error), \(error.userInfo)")
+			}
+		}
+		storeContainer = container
+	}
 }
-

@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 protocol AddDetailDelegate: NSObject {
-    func addDetail(item: Item?, invoice: Invoice?)
+	func addDetail(item: Item?, invoice: Invoice?, date: Date?)
 }
 class AddDetailTableViewController: UITableViewController {
     let placeholders = ["Product Item ID", "Quantity", "Invoice Number", "Receive Status"]
@@ -35,7 +35,8 @@ class AddDetailTableViewController: UITableViewController {
         let itemAvailable = viewModel?.item?.productItemID ?? 0 > 0 && viewModel?.item?.quantity ?? 0 > 0
         let invoiceAvailable = viewModel?.invoice?.invoiceNumber != nil && viewModel?.invoice?.receivedStatus ?? 0 > 0
         if itemAvailable || invoiceAvailable {
-            delegate?.addDetail(item: itemAvailable ? viewModel?.item : nil, invoice: invoiceAvailable ? viewModel?.invoice : nil)
+			let updateDateTime = viewModel?.updateDateTime()
+            delegate?.addDetail(item: itemAvailable ? viewModel?.item : nil, invoice: invoiceAvailable ? viewModel?.invoice : nil, date: updateDateTime)
             self.dismiss(animated: true)
         }
     }
@@ -51,12 +52,10 @@ class AddDetailTableViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 2
     }
 
@@ -89,6 +88,7 @@ extension AddDetailTableViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
     }
+	
     @objc func valueChanged(_ textField: UITextField) {
         guard let tagData = TextFieldData(rawValue: textField.tag), let value = textField.text else { return }
         switch tagData {
