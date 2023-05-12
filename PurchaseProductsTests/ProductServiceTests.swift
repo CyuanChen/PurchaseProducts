@@ -16,7 +16,7 @@ final class ProductServiceTests: XCTestCase {
 	override func setUp() {
 		super.setUp()
 		coreDataStack = TestCoreDataStack()
-		productService = ProductService(manageObjectContext: coreDataStack.mainContext, coreDataStack: coreDataStack)
+		productService = ProductService(manageObjectContext: CoreDataStack.mainContext, coreDataStack: coreDataStack)
 	}
 	
 	override func tearDown() {
@@ -35,7 +35,7 @@ final class ProductServiceTests: XCTestCase {
 	func testRootContextIsSavedAfterAddingProduct() {
 		let derivedContext = coreDataStack.newDerivedContext()
 		productService = ProductService(manageObjectContext: derivedContext, coreDataStack: coreDataStack)
-		expectation(forNotification: .NSManagedObjectContextDidSave, object: coreDataStack.mainContext) { _ in
+		expectation(forNotification: .NSManagedObjectContextDidSave, object: CoreDataStack.mainContext) { _ in
 			return true
 		}
 		derivedContext.perform {

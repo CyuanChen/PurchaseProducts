@@ -74,7 +74,6 @@ final class PurchaseProductsTests: XCTestCase {
     func testLoadData() throws {
         sut.loadSavedData()
         let results = sut.products
-        // return two mock products
         XCTAssertEqual(results.count, 2)
     }
 }

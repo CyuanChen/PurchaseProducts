@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 open class CoreDataStack {
+	public static let shared = CoreDataStack()
 	public static let modelName = "PurchaseProducts"
 	public static let model: NSManagedObjectModel = {
 	  let modelURL = Bundle.main.url(forResource: modelName, withExtension: "momd")!
@@ -63,7 +64,7 @@ open class CoreDataStack {
 				fatalError("Unresolved error \(error), \(error.userInfo)")
 			}
 		}
-		self.saveContext(self.mainContext)
+		saveContext(mainContext)
 	}
 	
 	
